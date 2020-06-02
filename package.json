@@ -1,0 +1,15 @@
+{
+  "name": "live-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "rain0002009",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "execa": "^4.0.2",
+    "node-media-server": "^2.1.9",
+    "tree-kill": "^1.2.2"
+  }
+}
