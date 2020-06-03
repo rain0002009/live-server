@@ -27,7 +27,7 @@ async function push ({ url, name }) {
     await subProcess
     console.log('ffmpeg ok')
   } catch (error) {
-    kill(subProcess.pid, 'SIGKILL')
+    subProcess.pid && kill(subProcess.pid, 'SIGKILL')
     subProcessStore.delete(name)
   }
 }
