@@ -1,13 +1,13 @@
-FROM node:latest
+FROM node:alpine
 
 WORKDIR /usr/src/live-server
 
-COPY package*.json ./
+COPY package.json *.lock ./
 
-RUN npm i
+RUN yarn --registry=https://registry.npm.taobao.org
 
 COPY . .
 
 EXPOSE 1935 8000
 
-CMD ["node","index.js"]
+CMD ["yarn","start"]
