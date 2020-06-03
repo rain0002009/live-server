@@ -5,7 +5,10 @@
   "author": "rain0002009",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "tar": "docker save -o live-server.tar live-server",
+    "build-image": "docker build -t live-server .",
+    "create-live-server": "docker run --name live-server -d -p 1935:1935 -p 3000:3000 live-server"
   },
   "dependencies": {
     "execa": "^4.0.2",
